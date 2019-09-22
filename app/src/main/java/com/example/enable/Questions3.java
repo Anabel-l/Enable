@@ -36,7 +36,7 @@ public class Questions3 extends AppCompatActivity {
         college.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                school = 2;
+                school = 2;//
                 Intent startIntent = new Intent(getApplicationContext(), Questions4.class);
                 startActivity(startIntent);
             }

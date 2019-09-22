@@ -63,6 +63,14 @@ public class Monday extends AppCompatActivity {
     public void ShowPopup4(View v){
         myDialog.setContentView(R.layout.popup_dinner);
         ImageButton close4 = (ImageButton)myDialog.findViewById(R.id.close4);
+        Button nutrients = (Button)myDialog.findViewById(R.id.nutrients);
+        nutrients.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), Nutrients.class);
+                startActivity(startIntent);
+            }
+        });
         close4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -74,14 +82,6 @@ public class Monday extends AppCompatActivity {
     public void ShowPopup5(View v){
         myDialog.setContentView(R.layout.popup_sleep);
         ImageButton close5 = (ImageButton)myDialog.findViewById(R.id.close5);
-        Button nutrients =(Button)myDialog.findViewById(R.id.nutrients);
-        nutrients.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Nutrients.class);
-                startActivity(startIntent);
-            }
-        });
         close5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
